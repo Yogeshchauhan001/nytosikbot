@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8670448192:AAHZTxXTKrKAyOxNsJXJjM9uOPOF6g8ErJ0")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "AAHZTxXTKrKAyOxNsJXJjM9uOPOF6g8ErJ0")
 ADMIN_ID = os.environ.get("ADMIN_ID", "@Nytosik")
 USERS_FILE = "users.json"
 
@@ -27,7 +27,7 @@ def save_user(user_id, username=""):
     return False
 
 def send_message(chat_id, text):
-    url = f"https://api.telegram.org/bot{8670448192:AAHZTxXTKrKAyOxNsJXJjM9uOPOF6g8ErJ0}/sendMessage"
+    url = f"https://api.telegram.org/bot{AAHZTxXTKrKAyOxNsJXJjM9uOPOF6g8ErJ0}/sendMessage"
     payload = {"chat_id": chat_id, "text": text, "parse_mode": "HTML"}
     try:
         return requests.post(url, json=payload, timeout=10).json()
